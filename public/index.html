@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CSS/HTML Workshop with govirtuo.com</title>
-  </head>
-  <body>
-    <div id="car">
-      <input class="js-name" type="text" placeholder="Car name"/>
-      <input class="js-price-by-day" type="number" placeholder="Price by day"/>
-      <input class="js-price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="js-name" type="text" placeholder="Driver name"/>
-      <input class="js-begin" type="date" placeholder="Rental begin date"/>
-      <input class="js-end" type="date" placeholder="Rental end date"/>
-      <input class="js-distance" type="number" placeholder="Distance in km"/>
-      <input class="js-option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script src="virtuo.js"></script>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <title>CSS/HTML Workshop with govirtuo.com</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<header><h3 class="h3-1">GoVirtuo</h3></header>
+<body>
+  <div id="car">
+    <table class="tab1">
+      <tr>
+        <th>What's the car name ?</th>
+        <th>What's its price by day ?</th>
+        <th>What's its price by km ?</th>
+      </tr>
+      <tr>
+        <td class="td1"><input class="js-name input1" type="text" placeholder="Car name"/></td>
+        <td><input class="js-price-by-day input1" type="number" placeholder="Price by day"/></td>
+        <td><input class="js-price-by-km input1" type="number" placeholder="Price by km"/></td>
+      </tr>
+    </table>
+  </div>
+  <div id="rental">
+    <table class="tab1">
+      <tr>
+        <th>What's the driver name</th>
+        <th>Choose the pick up date</th>
+        <th>Choose the return date</th>
+        <th>What's the distance ?</th>
+      </tr>
+      <tr>
+        <td><input class="js-name input1" type="text" placeholder="Driver name"/></td>
+        <td><input class="js-begin input1" type="date" placeholder="Rental begin date"/></td>
+        <td><input class="js-end input1" type="date" placeholder="Rental end date"/></td>  
+        <td><input class="js-distance input1" type="number" placeholder="Distance in km"/></td>
+      </tr>
+    </table>
+    <table class="tab1">
+      <tr>
+        <th>
+          <br/>
+          <p>In case of an accident/theft, Virtuo applies a 5000€ deductible. <br/><br/> 
+            The driver can reduce the deductible amount from 5000€ to 500€ with a deductible option for a few more euros per day.
+            The driver is charged an additional 4€/day when he chooses the deductible reduction option.
+          </p>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <input class="js-option cb1" id="check1" type="checkbox" placeholder="Deductible option"/>  
+          <label for="check1" class="check1">I want to subscribe to this option
+          </label>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <button id="compute" class="btn btn-success">Compute</button>
+  <br/><br/>
+  <div id="actors"></div>
+  <script src="virtuo.js"></script>
+  <script src="index.js"></script>
+</body>
 </html>
